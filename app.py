@@ -61,6 +61,9 @@ p img {
     max-width: 400px;
     display: block;
 }
+header { visibility: hidden; }
+footer { visibility: hidden; }
+#MainMenu { visibility: hidden; }
 </style>
 """, unsafe_allow_html=True)
 

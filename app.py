@@ -1,6 +1,8 @@
+import time
+
 import sentry_sdk
-import streamlit as st
 from sentry_sdk import capture_exception
+import streamlit as st
 
 from utils.discord_util import send_discord_message
 from utils.firestore_util import save_result
@@ -32,7 +34,6 @@ with st.sidebar:
 7. 서식과 텍스트를 수정하고 발행합니다.
 8. 처음부터 다시하려면 새로고침 해주세요. 
     """)
-
     st.markdown("")
     st.markdown("")
     st.header("개발자에게 전하고 싶은 말")
@@ -45,6 +46,8 @@ with st.sidebar:
         submit = st.form_submit_button("✉️ 전송")
         if submit:
             send_discord_message(f"{message}")
+            success = st.success("메세지가 전송되었습니다.")
+
 
     st.markdown("")
     st.markdown("")

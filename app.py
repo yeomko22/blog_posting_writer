@@ -35,7 +35,6 @@ with st.sidebar:
 8. 처음부터 다시하려면 새로고침 해주세요. 
     """)
     st.markdown("")
-    st.markdown("")
     st.header("개발자에게 전하고 싶은 말")
     with st.form("feedback", clear_on_submit=True):
         message = st.text_area(
@@ -45,11 +44,8 @@ with st.sidebar:
         )
         submit = st.form_submit_button("✉️ 전송")
         if submit:
-            send_discord_message(f"{message}")
+            send_discord_message(message_type="전하고 싶은 말", message=message)
             success = st.success("메세지가 전송되었습니다.")
-
-
-    st.markdown("")
     st.markdown("")
     st.markdown("Powered by gpt-3.5-turbo")
     st.markdown("""
@@ -155,7 +151,9 @@ if write_button:
     message = write_streaming_response(response)
     try:
         doc_id = save_result(image_paths, message)
-        send_discord_message(message=f"""
+        send_discord_message(
+            message_type="블로그 자동완성",
+            message=f"""
 uploaded_images: {len(images)}
 area: {area}
 subject: {subject}

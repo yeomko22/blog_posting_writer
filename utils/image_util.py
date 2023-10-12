@@ -18,5 +18,5 @@ def resize_image(image: Image.Image, max_size: int = 800) -> Image.Image:
         new_height = max_size
 
     # Resize the image
-    resized_image = image.resize((new_width, new_height), Image.ANTIALIAS)
+    resized_image = image.resize((new_width, new_height))
     return resized_image

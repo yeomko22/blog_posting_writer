@@ -1,5 +1,3 @@
-import time
-
 import sentry_sdk
 from sentry_sdk import capture_exception
 import streamlit as st
@@ -10,7 +8,7 @@ from utils.google_util import upload_images
 from utils.openai_util import request_chat_completion
 from utils.streamlit_util import write_streaming_response
 
-st.set_page_config(page_title="블로그 매직", page_icon="✨")
+st.set_page_config(page_title="블로그매직", page_icon="✨")
 sentry_sdk.set_tag("app", "blogmagic")
 
 if 'sentry_initialized' not in st.session_state:

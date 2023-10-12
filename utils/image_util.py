@@ -1,7 +1,7 @@
 from PIL import Image
 
 
-def resize_image(image: Image.Image, max_size: int = 800) -> Image.Image:
+def resize_image(image: Image.Image, max_size: int = 600) -> Image.Image:
     # Get the original image's width and height
     orig_width, orig_height = image.size
 

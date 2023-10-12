@@ -45,7 +45,6 @@ with st.sidebar:
         submit = st.form_submit_button("✉️ 전송")
         if submit:
             send_discord_message(message_type="전하고 싶은 말", message=message)
-            success = st.success("메세지가 전송되었습니다.")
     st.markdown("")
     st.markdown("Powered by gpt-3.5-turbo")
     st.markdown("""

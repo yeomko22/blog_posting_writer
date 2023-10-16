@@ -105,7 +105,6 @@ def input_description(images):
                 placeholder="이미지에 대한 간단한 설명을 적어주세요 (선택)"
             )
 
-
 col1, col2 = st.columns([0.3, 0.7])
 with col1:
     area = st.selectbox(
@@ -121,6 +120,7 @@ with col2:
 images = st.file_uploader(
     "이미지 파일 업로드(여러장 가능)",
     accept_multiple_files=True,
+    type=['png', 'jpg', 'jpeg', 'webp']
 )
 
 if not images:

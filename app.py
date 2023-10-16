@@ -110,7 +110,7 @@ col1, col2 = st.columns([0.3, 0.7])
 with col1:
     area = st.selectbox(
         label="분야",
-        options=["맛집리뷰", "IT리뷰", "여행후기", "개발", "요리레시피", "일상", "육아", "기타"]
+        options=["맛집리뷰", "IT리뷰", "영화 리뷰", "여행후기", "개발", "요리레시피", "일상", "육아", "기타"]
     )
 with col2:
     subject = st.text_input(
